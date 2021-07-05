@@ -1,77 +1,76 @@
 // Opciones que el usuario puede llegar a escribir
 
 const prompts = [
-    ["hi", "hey", "hello", "good morning", "good afternoon"],
-    ["how are you", "how is life", "how are things"],
-    ["what are you doing", "what is going on", "what is up"],
-    ["how old are you"],
-    ["who are you", "are you human", "are you bot", "are you human or bot"],
-    ["who created you", "who made you"],
+    ["Hola", "Hey", "Buenos dias", "Buenas tardes"],
+    ["¿Como estas?", "¿En que andas?", "¿Como anda todo?"],
+    ["¿Que andas haciendo?", "¿Que pasa?", "¿Algo que tengas para contarme?"],
+    ["¿Que edad tienes?"],
+    ["¿Quien sos?", "¿Sos un humano?", "¿Sos un bot?", "¿Sos un robot o un humano?"],
+    ["¿Quien te creo?", "¿Quien te programo?"],
     [
-      "your name please",
-      "your name",
-      "may i know your name",
-      "what is your name",
-      "what call yourself"
+      "Tu nombre por favor",
+      "¿Tu nombre?",
+      "Puedo saber tu nombre, por favor",
+      "¿Como deberia llamarte?"
     ],
-    ["i love you"],
-    ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
-    ["bad", "bored", "tired"],
-    ["help me", "tell me story", "tell me joke"],
-    ["ah", "yes", "ok", "okay", "nice"],
-    ["bye", "good bye", "goodbye", "see you later"],
-    ["what should i eat today"],
-    ["bro"],
-    ["what", "why", "how", "where", "when"],
-    ["no","not sure","maybe","no thanks"],
+    ["Te amo"],
+    ["Feliz", "Bien", "Divertido", "Increible", "Fantastico", "Copado"],
+    ["Mal", "Aburrido", "Cansado"],
+    ["Ayudame", "Contame una historia", "Dime un chiste"],
+    ["Ah", "Si", "Ok", "Okay", "Bien"],
+    ["Chau", "Hasta luego", "Nos vemos", "Nos vemos luego"],
+    ["¿Que deberia comer hoy?"],
+    ["¿Que onda?"],
+    ["¿Que?", "¿Porque?", "¿Como?", "¿Donde?", "¿Cuando?"],
+    ["No","No estoy seguro","Quizas","No, gracias"],
     [""],
-    ["haha","ha","lol","hehe","funny","joke"]
+    ["Jajaja","Ja","JAJA","Jeje","Gracioso","Que risa"]
   ]
   
   // posibles respuestas en orden
   
   const replies = [
-    ["Hello!", "Hi!", "Hey!", "Hi there!","Howdy"],
+    ["¡Hola!", "Buenas", "¡Hey!", "Buenas tardes","Buenos dias"],
     [
-      "Fine... how are you?",
-      "Pretty well, how are you?",
-      "Fantastic, how are you?"
+      "Bien... ¿Vos como estas??",
+      "Bastante bien, ¿Vos?",
+      "Fantastico, ¿Vos?"
     ],
     [
-      "Nothing much",
-      "About to go to sleep",
-      "Can you guess?",
-      "I don't know actually"
+      "No mucho",
+      "Por irme a dormir",
+      "¿Puedes adivinar?",
+      "En verdad no"
     ],
-    ["I am infinite"],
-    ["I am just a bot", "I am a bot. What are you?"],
-    ["The one true God, JavaScript"],
-    ["I am nameless", "I don't have a name"],
-    ["I love you too", "Me too"],
-    ["Have you ever felt bad?", "Glad to hear it"],
-    ["Why?", "Why? You shouldn't!", "Try watching TV"],
-    ["What about?", "Once upon a time..."],
-    ["Tell me a story", "Tell me a joke", "Tell me about yourself"],
-    ["Bye", "Goodbye", "See you later"],
+    ["Soy infinito"],
+    ["Soy solo un bot", "Soy un bot, ¿Vos que sos?"],
+    ["El unico dios, JavaScript"],
+    ["No tengo nombre", "Lamentablemente no tengo nombre, ojala tuviera uno"],
+    ["Yo tambien", "Te amo a vos tambien"],
+    ["¿Te sentiste mal alguna vez?", "Me alegro de escucharlo"],
+    ["¿Porque?", "¿Porque? No deberias", "Intenta ver la television"],
+    ["¿Que pasa?", "Erase una vez.."],
+    ["Contame una historia", "Contame un chiste", "Cuentame sobre ti"],
+    ["Adios", "Chau", "Nos vemos luego"],
     ["Sushi", "Pizza"],
-    ["Bro!"],
-    ["Great question"],
-    ["That's ok","I understand","What do you want to talk about?"],
-    ["Please say something :("],
-    ["Haha!","Good one!"]
+    ["Bro"],
+    ["¡Buena pregunta!"],
+    ["Esta bien","Te entiendo","¿De que quieres hablar?"],
+    ["Porfavor di algo :(", "Porfavor cuentame algo :("],
+    ["Jaja!","¡Buena!"]
   ]
   
   // alternativas random
   
   const alternative = [
-    "Same",
-    "Go on...",
+    "Igual",
+    "Continua...",
     "Bro...",
-    "Try again",
-    "I'm listening...",
-    "I don't understand :/"
+    "Intenta nuevamente",
+    "Te estoy escuchando...",
+    "No entiendo :/"
   ]
   
   // coronavirus
   
-  const coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I don't have COVID", "These are uncertain times", "I'm a robot i can not have CODIV.", "Robots don't get COVID"]
+  const coronavirus = ["Porfavor quedate en casa", "Usa barbijo", "Afortunadamente, no tengo COVID", "Son tiempos dificiles", "Soy un robot no puedo tener COVID", "Los robots no se pueden contagiar COVID"]
