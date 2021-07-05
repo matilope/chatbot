@@ -32,7 +32,7 @@ const prompts = [
   const replies = [
     ["¡Hola!", "Buenas", "¡Hey!", "Buenas tardes","Buenos dias"],
     [
-      "Bien... ¿Vos como estas??",
+      "Bien... ¿Vos como estas?",
       "Bastante bien, ¿Vos?",
       "Fantastico, ¿Vos?"
     ],
@@ -73,4 +73,4 @@ const prompts = [
   
   // coronavirus
   
-  const coronavirus = ["Porfavor quedate en casa", "Usa barbijo", "Afortunadamente, no tengo COVID", "Son tiempos dificiles", "Soy un robot no puedo tener COVID", "Los robots no se pueden contagiar COVID"]
+  const coronavirus = ["Porfavor quedate en casa", "Usá barbijo", "Afortunadamente, no tengo COVID", "Son tiempos dificiles", "Soy un robot no puedo tener COVID", "Los robots no se pueden contagiar COVID"]
