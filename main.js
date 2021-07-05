@@ -15,28 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
     let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
     text = text
       .replace(/ a /g, " ")
-      .replace(/i feel /g, "")
-      .replace(/whats/g, "what is")
-      .replace(/please /g, "")
-      .replace(/ please/g, "")
-      .replace(/r u/g, "are you");
+      .replace(/me siento /g, "")
+      .replace(/que/g, "Que es")
+      .replace(/porfavor /g, "")
+      .replace(/ porfavor/g, "");
   
     if (compare(prompts, replies, text)) { 
 
       product = compare(prompts, replies, text);
-    } else if (text.match(/thank/gi)) {
-      product = "You're welcome!"
-    } else if (text.match(/(corona|covid|virus|pandemic)/gi)) {
+    } else if (text.match(/Gracias/gi)) {
+      product = "¡De nada!"
+    } else if (text.match(/(corona|covid|virus|pandemia)/gi)) {
 
       product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
-    } else if (text.match(/help/gi)) {
-      product = "What you need help for?"
+    } else if (text.match(/ayuda/gi)) {
+      product = "¿Para que necesitas ayuda?"
     }
-    else if (text.match(/emergency/gi)) {
-      product = "If you are in an emergency, be calm and call 911"
+    else if (text.match(/emergencia/gi)) {
+      product = "Si estas en una emergencia, llama al 911"
     }
-    else if (text.match(/tired/gi)) {
-      product = "If it's past 9pm, go to sleep"
+    else if (text.match(/cansado/gi)) {
+      product = "Si ya son pasadas las 22:00hs, vaya a dormir"
     }
     else {
       product = alternative[Math.floor(Math.random() * alternative.length)];
