@@ -1,35 +1,35 @@
 // Opciones que el usuario puede llegar a escribir
 
-const prompts = [
-    ["Hola", "Hey", "Buenos dias", "Buenas tardes"],
-    ["¿Como estas?", "¿En que andas?", "¿Como anda todo?"],
-    ["¿Que andas haciendo?", "¿Que pasa?", "¿Algo que tengas para contarme?"],
-    ["¿Que edad tienes?"],
-    ["¿Quien sos?", "¿Sos un humano?", "¿Sos un bot?", "¿Sos un robot o un humano?"],
-    ["¿Quien te creo?", "¿Quien te programo?"],
+const preguntas = [
+    ["hola", "Hey", "buenos dias", "buenas tardes"],
+    ["como estas", "en que andas", "como andas", "todo bien"],
+    ["que andas haciendo", "que pasa", "algo que tengas para contarme"],
+    ["que edad tienes"],
+    ["quien sos", "sos un humano", "sos un bot?", "sos un robot o un humano"],
+    ["quien te creo", "quien te programo"],
     [
-      "Tu nombre por favor",
-      "¿Tu nombre?",
-      "Puedo saber tu nombre, por favor",
-      "¿Como deberia llamarte?"
+      "tu nombre por favor",
+      "tu nombre",
+      "puedo saber tu nombre, por favor",
+      "como deberia llamarte"
     ],
-    ["Te amo"],
-    ["Feliz", "Bien", "Divertido", "Increible", "Fantastico", "Copado"],
-    ["Mal", "Aburrido", "Cansado"],
-    ["Ayudame", "Contame una historia", "Dime un chiste"],
-    ["Ah", "Si", "Ok", "Okay", "Bien"],
-    ["Chau", "Hasta luego", "Nos vemos", "Nos vemos luego"],
-    ["¿Que deberia comer hoy?"],
-    ["¿Que onda?"],
-    ["¿Que?", "¿Porque?", "¿Como?", "¿Donde?", "¿Cuando?"],
-    ["No","No estoy seguro","Quizas","No, gracias"],
+    ["te amo"],
+    ["feliz", "bien", "divertido", "increible", "fantastico", "copado"],
+    ["mal", "aburrido", "cansado"],
+    ["ayudame", "contame una historia", "dime un chiste"],
+    ["ah", "si", "ok", "bien"],
+    ["chau", "hasta luego", "nos vemos", "nos vemos luego"],
+    ["que deberia comer hoy"],
+    ["que onda"],
+    ["que", "porque", "como", "donde", "cuando"],
+    ["no","no estoy seguro","quizas","no, gracias"],
     [""],
-    ["Jajaja","Ja","JAJA","Jeje","Gracioso","Que risa"]
-  ]
+    ["jajaja","ja","JAJA","jeje","gracioso","que risa"]
+  ];
   
   // posibles respuestas en orden
   
-  const replies = [
+  const respuestas = [
     ["¡Hola!", "¡Hey!", "Buenas tardes","Buenos dias"],
     [
       "Bien... ¿Vos como estas?",
@@ -47,7 +47,7 @@ const prompts = [
     ["El unico dios, JavaScript"],
     ["No tengo nombre", "Lamentablemente no tengo nombre, ojala tuviera uno"],
     ["Yo tambien", "Te amo a vos tambien"],
-    ["¿Te sentiste mal alguna vez?", "Me alegro de escucharlo"],
+    ["Me alegro, ¿Te sentiste mal alguna vez?", "Me alegro de escucharlo"],
     ["¿Porque?", "¿Porque? No deberias", "Intenta ver la television"],
     ["¿Que pasa?", "Erase una vez.."],
     ["Contame una historia", "Contame un chiste", "Cuentame sobre ti"],
@@ -58,19 +58,19 @@ const prompts = [
     ["Esta bien","Te entiendo","¿De que quieres hablar?"],
     ["Porfavor di algo :(", "Porfavor cuentame algo :("],
     ["Jaja!","¡Buena!"]
-  ]
+  ];
   
   // alternativas random
   
-  const alternative = [
+  const alternativas = [
     "Igual",
     "Continua...",
     "Bro...",
     "Intenta nuevamente",
     "Te estoy escuchando...",
     "No entiendo :/"
-  ]
+  ];
   
   // coronavirus
   
-  const coronavirus = ["Porfavor quedate en casa", "Usá barbijo", "Afortunadamente, no tengo COVID", "Son tiempos dificiles", "Soy un robot no puedo tener COVID", "Los robots no se pueden contagiar COVID"]
+  const coronavirus = ["Porfavor quedate en casa", "Usá barbijo", "Afortunadamente, no tengo COVID", "Son tiempos dificiles", "Soy un robot no puedo tener COVID", "Los robots no se pueden contagiar COVID"];

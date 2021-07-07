@@ -10,83 +10,81 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   function output(input) {
-    let product;
-  
-    let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
+    let robotRespuesta;
+    let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
     text = text
       .replace(/ a /g, " ")
       .replace(/me siento /g, "")
-      .replace(/que/g, "Que es")
       .replace(/porfavor /g, "")
       .replace(/ porfavor/g, "");
   
-    if (compare(prompts, replies, text)) { 
-      product = compare(prompts, replies, text);
+    if (compare(preguntas, respuestas, text)) { 
+      robotRespuesta = compare(preguntas, respuestas, text);
     } else if (text.match(/Gracias/gi)) {
-      product = "¡De nada!"
+      robotRespuesta = "¡De nada!"
     } else if (text.match(/(corona|covid|virus|pandemia)/gi)) {
-      product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
+      robotRespuesta = coronavirus[Math.floor(Math.random() * coronavirus.length)];
     } else if (text.match(/ayuda/gi)) {
-      product = "¿Para que necesitas ayuda?"
+      robotRespuesta = "¿Para que necesitas ayuda?"
     }
     else if (text.match(/emergencia/gi)) {
-      product = "Si estas en una emergencia, llama al 911"
+      robotRespuesta = "Si estas en una emergencia, llama al 911"
     }
     else if (text.match(/cansado/gi)) {
-      product = "Si ya son pasadas las 22:00hs, vaya a dormir"
+      robotRespuesta = "Si ya son pasadas las 23:00, vaya a dormir"
     }
     else {
-      product = alternative[Math.floor(Math.random() * alternative.length)];
+      robotRespuesta = alternativas[Math.floor(Math.random() * alternativas.length)];
     }
-  
-    addChat(input, product);
+
+    addChat(input, robotRespuesta);
   }
   
-  function compare(promptsArray, repliesArray, string) {
-    let reply;
-    let replyFound = false;
-    for (let x = 0; x < promptsArray.length; x++) {
-      for (let j = 0; j < promptsArray[x].length; j++) {
-        if (promptsArray[x][j] === string) {
-          let replies = repliesArray[x];
-          reply = replies[Math.floor(Math.random() * replies.length)];
-          replyFound = true;
+  function compare(preguntasArray, respuestasArray, string) {
+    let respuesta;
+    let respuestaEncontrada = false;
+    for (let x = 0; x < preguntasArray.length; x++) {
+      for (let j = 0; j < preguntasArray[x].length; j++) {
+        if (preguntasArray[x][j] === string) {
+          let respuestas = respuestasArray[x];
+          respuesta = respuestas[Math.floor(Math.random() * respuestas.length)];
+          respuestaEncontrada = true;
           break;
         }
       }
-      if (replyFound) {
+      if (respuestaEncontrada) {
         break;
       }
     }
-    return reply;
+    return respuesta;
   }
   
-  function addChat(input, product) {
-    const messagesContainer = document.getElementById("messages");
+  function addChat(input, robotRespuesta) {
+    const mensajeContainer = document.getElementById("mensaje");
   
-    let userDiv = document.createElement("div");
-    userDiv.id = "user";
-    userDiv.className = "user response";
-    userDiv.innerHTML = `<img src="user.png" class="avatar"><span>${input}</span>`;
-    messagesContainer.appendChild(userDiv);
+    let usuarioDiv = document.createElement("div");
+    usuarioDiv.id = "usuario";
+    usuarioDiv.className = "usuario respuesta";
+    usuarioDiv.innerHTML = `<img src="usuario.png" class="avatar"><span>${input}</span>`;
+    mensajeContainer.appendChild(usuarioDiv);
   
     let botDiv = document.createElement("div");
-    let botImg = document.createElement("img");
-    let botText = document.createElement("span");
+    let botImagen = document.createElement("img");
+    let botTexto = document.createElement("span");
     botDiv.id = "bot";
-    botImg.src = "bot-mini.png";
-    botImg.className = "avatar";
-    botDiv.className = "bot response";
-    botText.innerText = "Escribiendo...";
-    botDiv.appendChild(botText);
-    botDiv.appendChild(botImg);
-    messagesContainer.appendChild(botDiv);
+    botImagen.src = "bot-mini.png";
+    botImagen.className = "avatar";
+    botDiv.className = "bot respuesta";
+    botTexto.innerText = "Escribiendo...";
+    botDiv.appendChild(botTexto);
+    botDiv.appendChild(botImagen);
+    mensajeContainer.appendChild(botDiv);
 
-    messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
+    mensajeContainer.scrollTop = mensajeContainer.scrollHeight - mensajeContainer.clientHeight;
   
     setTimeout(() => {
-      botText.innerText = `${product}`;
-      textToSpeech(product)
+      botTexto.innerText = `${robotRespuesta}`;
+      textToSpeech(robotRespuesta)
     }, 2000
     )
   
