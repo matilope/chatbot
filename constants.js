@@ -30,7 +30,7 @@ const prompts = [
   // posibles respuestas en orden
   
   const replies = [
-    ["¡Hola!", "Buenas", "¡Hey!", "Buenas tardes","Buenos dias"],
+    ["¡Hola!", "¡Hey!", "Buenas tardes","Buenos dias"],
     [
       "Bien... ¿Vos como estas?",
       "Bastante bien, ¿Vos?",

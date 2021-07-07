@@ -21,12 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/ porfavor/g, "");
   
     if (compare(prompts, replies, text)) { 
-
       product = compare(prompts, replies, text);
     } else if (text.match(/Gracias/gi)) {
       product = "¡De nada!"
     } else if (text.match(/(corona|covid|virus|pandemia)/gi)) {
-
       product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
     } else if (text.match(/ayuda/gi)) {
       product = "¿Para que necesitas ayuda?"
@@ -48,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let reply;
     let replyFound = false;
     for (let x = 0; x < promptsArray.length; x++) {
-      for (let y = 0; y < promptsArray[x].length; y++) {
-        if (promptsArray[x][y] === string) {
+      for (let j = 0; j < promptsArray[x].length; j++) {
+        if (promptsArray[x][j] === string) {
           let replies = repliesArray[x];
           reply = replies[Math.floor(Math.random() * replies.length)];
           replyFound = true;
@@ -79,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     botImg.src = "bot-mini.png";
     botImg.className = "avatar";
     botDiv.className = "bot response";
-    botText.innerText = "Typing...";
+    botText.innerText = "Escribiendo...";
     botDiv.appendChild(botText);
     botDiv.appendChild(botImg);
     messagesContainer.appendChild(botDiv);
